@@ -2,7 +2,6 @@
     "extends": "@tsconfig/node22/tsconfig.json",
     "compilerOptions": {
         "outDir": "./dist",
-        "rootDir": "./src",
         "paths": {
             "@/*": [
                 "./src/*"
@@ -10,8 +9,8 @@
         }
     },
     "include": [
-        "src/**/*"
-    ], 
+        "src/**/*",
+    ],
     "exclude": [
         "node_modules",
         "dist"

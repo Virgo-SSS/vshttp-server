@@ -4,7 +4,9 @@ function greet(name: string): string {
 }
 
 function farewell(name: string): string {
-  return `Goodbye, ${name}!`;
+  const b: number = 30;
+  
+  return `Goodbye, ${name}! Farewell at age.`;
 }
 
 console.log(greet("TypeScript"));
