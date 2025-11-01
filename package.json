@@ -11,7 +11,7 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
     "prettier": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +26,10 @@
     "prettier": "3.6.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2"
+    "typescript-eslint": "^8.46.2",
+    "vitest": "^4.0.6"
+  },
+  "dependencies": {
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

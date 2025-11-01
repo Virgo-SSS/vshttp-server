@@ -2,7 +2,7 @@ import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import { defineConfig } from 'eslint/config'
-import eslintConfigPrettier from "eslint-config-prettier/flat";
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default defineConfig([
   {
@@ -11,6 +11,13 @@ export default defineConfig([
     extends: ['js/recommended'],
     languageOptions: { globals: globals.node },
   },
-  tseslint.configs.recommended,
+  {
+    files: ['**/*.{ts,mts,cts}'],
+    plugins: { tseslint },
+    extends: [tseslint.configs.recommended],
+    rules: {
+      '@typescript-eslint/explicit-function-return-type': 'error',
+    },
+  },
   eslintConfigPrettier,
 ])
